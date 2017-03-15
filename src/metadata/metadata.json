@@ -1,0 +1,139 @@
+{
+  "package": "SnapCXAddressValidation",
+  "tagline": "SnapCXAddressValidation API",
+  "description": "Verify shipping addresses in real-time around the world.",
+  "image": "http:\/\/logo.clearbit.com\/snapcx.io",
+  "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-SnapCXAddressValidation-Package",
+  "keywords": [ "API", "address", "shipping", "verify", "GEO"
+  ],
+  "accounts": {
+    "domain": "snapcx.io",
+    "credentials": [
+      "apiKey"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "validateUSAddress",
+      "description": "This API end point is for validating US addresses only.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from SnapCX",
+          "required": true
+        },
+        {
+          "name": "requestId",
+          "type": "String",
+          "info": "Mandatory Client provided unique request id. Same request_id is returned as part of response header.",
+          "required": true
+        },
+        {
+          "name": "street",
+          "type": "String",
+          "info": "Mandatory Address line 1. It’s needed for any address validation",
+          "required": true
+        },
+        {
+          "name": "secondaryStreet",
+          "type": "String",
+          "info": "Optional Address line2, if it’s there. Examples are apt# or suite# etc.",
+          "required": false
+        },
+        {
+          "name": "city",
+          "type": "String",
+          "info": "Optional City & State OR zipcode should be present at least. If city & state are present then zipcode is ignored.",
+          "required": false
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "info": "Optional 2 char valid USA state code. Example: NY / NJ / CA etc.",
+          "required": false
+        },
+        {
+          "name": "zipcode",
+          "type": "String",
+          "info": "Optional 5 digit US zipcode",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "validateGlobalAddress",
+      "description": "This API end point is for validating global addresses.",
+      "args": [
+        {
+          "name": "apiKey",
+          "type": "credentials",
+          "info": "Api key obtained from SnapCX",
+          "required": true
+        },
+        {
+          "name": "requestId",
+          "type": "String",
+          "info": "Mandatory Client provided unique request id. Same request_id is returned as part of response header.",
+          "required": true
+        },
+        {
+          "name": "street",
+          "type": "String",
+          "info": "Mandatory Address line 1. It’s needed for any address validation",
+          "required": true
+        },
+        {
+          "name": "country",
+          "type": "String",
+          "info": "Country name or ISO 3-char or ISO 2-char country code. Examples USA, CAN, AU etc.",
+          "required": true
+        },
+        {
+          "name": "secondaryStreet",
+          "type": "String",
+          "info": "Optional Address line2, if it’s there. Examples are apt# or suite# etc.",
+          "required": false
+        },
+        {
+          "name": "city",
+          "type": "String",
+          "info": "Optional City & State OR zipcode should be present at least. If city & state are present then zipcode is ignored.",
+          "required": false
+        },
+        {
+          "name": "state",
+          "type": "String",
+          "info": "Optional 2 char valid USA state code. Example: NY / NJ / CA etc.",
+          "required": false
+        },
+        {
+          "name": "zipcode",
+          "type": "String",
+          "info": "Optional 5 digit US zipcode",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    }
+  ]
+}
