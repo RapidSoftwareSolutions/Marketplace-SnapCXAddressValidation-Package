@@ -45,7 +45,7 @@ $app->post('/api/SnapCXAddressValidation/validateUSAddress', function ($request,
         $rawBody = json_decode($resp->getBody());
 
         $all_data[] = $rawBody;
-        if ($response->getStatusCode() == '200') {
+        if ($response->getStatusCode() == '200' && $rawBody->header->status != 'FAIL') {
             $result['callback'] = 'success';
             $result['contextWrites']['to'] = is_array($all_data) ? $all_data : json_decode($all_data);
         } else {
