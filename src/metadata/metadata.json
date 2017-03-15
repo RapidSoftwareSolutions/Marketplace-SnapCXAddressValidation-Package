@@ -114,7 +114,7 @@
         {
           "name": "state",
           "type": "String",
-          "info": "Optional 2 char valid USA state code. Example: NY / NJ / CA etc.",
+          "info": " Dependending upon country.",
           "required": false
         },
         {

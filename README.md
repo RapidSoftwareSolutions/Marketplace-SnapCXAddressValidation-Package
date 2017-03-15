@@ -34,6 +34,6 @@ This API end point is for validating global addresses.
 | country        | String     | Country name or ISO 3-char or ISO 2-char country code. Examples USA, CAN, AU etc.
 | secondaryStreet| String     | Optional Address line2, if it’s there. Examples are apt# or suite# etc.
 | city           | String     | Optional City & State OR zipcode should be present at least. If city & state are present then zipcode is ignored.
-| state          | String     | Optional 2 char valid USA state code. Example: NY / NJ / CA etc.
+| state          | String     | Dependending upon country.
 | zipcode        | String     | Optional 5 digit US zipcode
 
