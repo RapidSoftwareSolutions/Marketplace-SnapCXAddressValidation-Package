@@ -2,7 +2,7 @@
 
 # SnapCXAddressValidation Package
 Verify shipping addresses in real-time around the world.
-* Domain: snapcx.io
+* Domain: [SnapCX](https://snapcx.io/) 
 * Credentials: apiKey
 
 ## How to get credentials: 
